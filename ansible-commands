@@ -1,0 +1,47 @@
+sudo nano ansible-install.sh
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository - yes - update ppa:ansible/ansible
+sudo apt install ansible
+bash ansible-install.sh
+ansible --version
+python3 --version
+cd .ssh/
+ssh-keygen
+sudo cat id_rsa.pub
+sudo apt update
+cd .ssh/
+ls
+sudo nano authorized_keys
+sudo apt update
+cd .ssh/
+ls
+sudo nano authorized_keys
+cd /etc/ansible/
+sudo nano hosts
+Slave1 ansible_host=172.31.33.191
+Slave2 ansible_host=172.31.33.94
+ansible –m ping all
+ansible –m ping Slave1
+sudo nano play1.yaml
+Code
+---
+- name: installing java
+  hosts: Slave1
+  become: true
+  tasks:
+  - name: installing java on slave1
+    apt: name=openjdk-18-jdk update-cache=yes state=latest
+- name: installing mysql
+  hosts: Slave2
+  become: true
+  tasks:
+  - name: installing mysql on slave2
+    apt: name=mysql-server update-cache=yes state=latest
+Code End
+ansible-playbook play1.yaml --syntax-check
+ansible-playbook play1.yaml --check
+ansible-playbook play1.yaml
+java --version
+mysql --version
+
