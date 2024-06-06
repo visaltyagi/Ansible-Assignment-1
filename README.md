@@ -1,7 +1,7 @@
 # Ansible-Assignment-1
 Setup Ansible Cluster &amp; Install Java &amp; MySQL using Playbooks - Ansible Assignment 1
 
-**For the detailed solution to this assignment, click this link:**: https://visaltyagi.medium.com/setup-ansible-cluster-install-java-mysql-using-playbooks-ansible-assignment-1-902bf6fe895b
+**For the detailed solution to this assignment, click this link:**: https://medium.com/devops-guides/setup-ansible-cluster-install-java-mysql-using-playbooks-ansible-assignment-1-46a198ffb0b4
 
 **Step 1:** Create an EC2 Instance.
 
